@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.home-container {
+  font-family: "Press Start 2P", monospace;
+  height: 100vh;
+  background: #0c0c1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.pixel-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/bg-pixel-city.png") repeat;
+  opacity: 0.2;
+  z-index: 0;
+  animation: scrollBackground 60s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+.intro-box {
+  z-index: 1;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 10px #00ffea;
+}
+
+.start-button {
+  background: #000;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.start-button:hover {
+  background: #00ffea;
+  color: #000;
+  transform: scale(1.05);
+}
