@@ -1,0 +1,45 @@
+.pixel-navbar {
+  font-family: "Press Start 2P", monospace;
+  background-color: #000;
+  color: #0ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #0ff;
+  box-shadow: 0 4px 0 #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 0.75rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 0.65rem;
+  padding-bottom: 4px;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+  color: #fff;
+  border-bottom: 2px solid #0ff;
+}
+
+.nav-item.active {
+  color: #fff;
+  border-bottom: 2px solid #0ff;
+}

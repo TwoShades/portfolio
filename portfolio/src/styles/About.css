@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.about-container {
+  font-family: "Press Start 2P", monospace;
+  background-color: #0c0c1f;
+  color: #0ff;
+  min-height: calc(100vh - 160px); /* Navbar + Footer height offset */
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.dialog-box {
+  background: #000;
+  border: 4px solid #0ff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 0 12px #0ff;
+}
+
+.npc-name {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.dialog-text {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #0ff;
+}
+
+.stats-panel,
+.level-log {
+  background: #000;
+  border: 2px dashed #0ff;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  font-size: 0.8rem;
+  color: #0ff;
+  box-shadow: 0 0 6px #0ff;
+}
+
+.stats-panel h3,
+.level-log h3 {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  line-height: 2;
+}

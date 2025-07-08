@@ -1,0 +1,27 @@
+.pixel-footer {
+  font-family: "Press Start 2P", monospace;
+  background-color: #000;
+  color: #0ff;
+  text-align: center;
+  padding: 1rem 1rem;
+  border-top: 4px solid #0ff;
+  box-shadow: 0 -4px 0 #111;
+  font-size: 0.55rem;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #0ff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
