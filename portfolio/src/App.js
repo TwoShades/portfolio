@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 // Placeholder imports for future pages
 import About from "./pages/About";
-// import Projects from './pages/Projects';
-// import Resume from './pages/Resume';
+import Project from "./pages/Projects";
+import Resume from "./pages/Resume";
 // import Contact from './pages/Contact';
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* Future Routes */}
-        {/* <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<Project />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        {/* Future Routes */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       {/* Footer */}
       <Footer />

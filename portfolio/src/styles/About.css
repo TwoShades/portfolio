@@ -11,6 +11,40 @@
   align-items: center;
   gap: 2rem;
   box-sizing: border-box;
+
+  font-family: "Press Start 2P", monospace;
+  background-image: url("../assets/bg-pixel-city-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #0ff;
+  position: relative;
+  animation: scrollBackground 60s linear infinite;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.about-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
 }
 
 .dialog-box {

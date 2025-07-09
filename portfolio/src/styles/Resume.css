@@ -1,0 +1,110 @@
+.resume-container {
+  font-family: "Press Start 2P", monospace;
+  background-color: #0c0c1f;
+  color: #0ff;
+  min-height: calc(100vh - 160px);
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  /* background-image: url("../assets/bg-terminal-pixel.png");  */
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-container h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.resume-section {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px dashed #0ff;
+  box-shadow: 0 0 8px #0ff;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  font-size: 0.7rem;
+}
+
+.resume-section h3 {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.resume-section ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+.resume-section p,
+li {
+  line-height: 1.8;
+}
+
+.typing {
+  width: 24ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #0ff;
+  animation: typing 3s steps(24), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.download-btn {
+  font-size: 0.65rem;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: #000;
+  box-shadow: 0 0 8px #0ff;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.download-btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 12px #0ff;
+}
+
+.resume-section p::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.ascii-header {
+  font-family: monospace;
+  font-size: 0.45rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  margin-bottom: 1rem;
+  white-space: pre;
+  text-align: center;
+}
