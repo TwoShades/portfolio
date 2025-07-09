@@ -16,7 +16,7 @@
   background-image: url("../assets/bg-pixel-city-1.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   color: #0ff;
   position: relative;
   animation: scrollBackground 60s linear infinite;

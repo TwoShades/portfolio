@@ -1,12 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import "../styles/Home.css";
 
 import hoverOnSFX from "../assets/sfx/hover-on.wav";
 import hoverOffSFX from "../assets/sfx/hover-off.wav";
 import clickSFX from "../assets/sfx/click.wav";
 
+const bootLines = [
+  "Initializing system...",
+  "Loading assets...",
+  "Connecting to server...",
+  "Access granted.",
+  "Launching portfolio...",
+];
+
 const Home = () => {
   const [volume, setVolume] = useState(0.5); // Default: 50%
+
+  const [bootIndex, setBootIndex] = useState(-1);
+  const [booting, setBooting] = useState(false);
+  const navigate = useNavigate();
+
+  const [typingLine, setTypingLine] = useState("");
+  const charIndex = useRef(0);
+  const fullLine = useRef("");
 
   const hoverAudio = new Audio(hoverOnSFX);
   const hoverOffAudio = new Audio(hoverOffSFX);
@@ -20,33 +38,92 @@ const Home = () => {
   const playHoverOff = () => hoverOffAudio.play().catch(() => {});
   const playClick = () => clickAudio.play().catch(() => {});
 
+  const handlePressPlay = () => {
+    clickAudio.play();
+    setBooting(true);
+    setBootIndex(0);
+  };
+
+  useEffect(() => {
+    let interval;
+
+    if (booting && bootIndex < bootLines.length) {
+      fullLine.current = bootLines[bootIndex];
+      charIndex.current = 0;
+      setTypingLine("");
+
+      interval = setInterval(() => {
+        const currentChar = fullLine.current.charAt(charIndex.current);
+        if (charIndex.current < fullLine.current.length && currentChar) {
+          setTypingLine((prev) => prev + currentChar);
+          charIndex.current++;
+        } else {
+          clearInterval(interval);
+          setTimeout(() => {
+            setBootIndex((prev) => prev + 1);
+          }, 400);
+        }
+      }, 40);
+    }
+
+    if (bootIndex === bootLines.length) {
+      setTimeout(() => navigate("/about"), 800);
+    }
+
+    return () => clearInterval(interval);
+  }, [bootIndex, booting, navigate]);
+
   return (
     <div className="home-container">
       <div className="pixel-bg"></div>
-      <div className="intro-box">
-        <h1>👾 Samuel Rivest</h1>
-        <p>Unity Developer · VR Engineer · Creative Technologist</p>
-        <button
-          className="start-button"
-          onClick={playClick}
-          onMouseEnter={playHover}
-          onMouseLeave={playHoverOff}
-        >
-          ▶ Press Start
-        </button>
+      {!booting ? (
+        <div className="intro-box">
+          <h1>👾 Samuel Rivest</h1>
+          <p>Unity Developer · VR Engineer · Creative Technologist</p>
+          <button
+            className="start-button"
+            onClick={handlePressPlay}
+            onMouseEnter={playHover}
+            onMouseLeave={playHoverOff}
+          >
+            ▶ Press Start
+          </button>
 
-        <div className="volume-slider">
-          🔉 Volume:
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={(e) => setVolume(parseFloat(e.target.value))}
-          />
+          <div className="volume-slider">
+            🔉 Volume:
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={(e) => setVolume(parseFloat(e.target.value))}
+            />
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="boot-sequence">
+          <div className="tv-frame">
+            <img
+              src={require("../assets/UI/PC-Frame-export.png")}
+              alt="Pixel TV"
+            />
+            <div className="tv-screen">
+              <pre className="boot-lines">
+                {bootLines.slice(0, bootIndex).map((line, idx) => (
+                  <div key={idx}>{line}</div>
+                ))}
+                {bootIndex < bootLines.length && (
+                  <div>
+                    {typingLine}
+                    <span className="cursor">_</span>
+                  </div>
+                )}
+              </pre>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

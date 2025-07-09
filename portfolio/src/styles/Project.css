@@ -8,10 +8,20 @@
   flex-direction: column;
   align-items: center;
 
-  background-image: url("../assets/bg-pixel-forest-1.png");
+  background-image: url("../assets/bg-pixel-city-4.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  animation: scrollBackground 60s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0;
+  }
 }
 
 .projects-container h2 {
@@ -99,7 +109,7 @@
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   backface-visibility: hidden;
   background: #000;
