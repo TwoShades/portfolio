@@ -9,7 +9,7 @@ This project is a pixel-art inspired, retro-hacker-styled multi-page site showca
 
 ## 🌐 Live Site
 
-[https://yourusername.github.io/](https://twoshades.github.io/) *(I will update once deployed)*
+[https://twoshades.github.io/](https://twoshades.github.io/) *(I will update once deployed)*
 
 ---
 
