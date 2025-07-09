@@ -36,7 +36,7 @@ This project is a pixel-art inspired, retro-hacker-styled multi-page site showca
 ---
 
 ## 📂 Folder Structure
-
+```
 src/
 ├── assets/ # Pixel backgrounds, sound effects, previews
 │ ├── backgrounds/
@@ -46,7 +46,7 @@ src/
 ├── pages/ # About, Projects, Resume, Home
 ├── styles/ # One CSS file per page/component
 └── App.js # Main app layout + routing
-
+```
 
 ---
 
