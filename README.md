@@ -53,15 +53,14 @@ src/
 
 ```bash
 
-📸 Screenshots (optional)
-
-Add animated GIFs or screenshots of the Home, Projects, and Resume pages.
 📄 License
 
 This project is open source and available under the MIT License.
+```
+
 🙋‍♂️ About Me
 
 I'm Samuel Rivest – a bilingual developer from Montreal with a passion for immersive education, clean UX, and gamified learning.
 Let’s build something cool: rivest.samuel@outlook.com
 
-```
+
