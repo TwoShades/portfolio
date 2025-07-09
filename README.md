@@ -50,23 +50,8 @@ src/
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-
-2. Install dependencies
-
-npm install
-
-3. Run the dev server
-
-npm run dev
-# or
-npm start
 
 📸 Screenshots (optional)
 
@@ -78,3 +63,5 @@ This project is open source and available under the MIT License.
 
 I'm Samuel Rivest – a bilingual developer from Montreal with a passion for immersive education, clean UX, and gamified learning.
 Let’s build something cool: rivest.samuel@outlook.com
+
+```
