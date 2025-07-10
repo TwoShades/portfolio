@@ -192,6 +192,7 @@
 
 .boot-sequence {
   background: #000;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -200,7 +201,7 @@
 
 .tv-frame {
   position: relative;
-  width: 600px;
+  width: 100%;
   max-width: 90%;
 }
 
@@ -211,12 +212,10 @@
 
 .tv-screen {
   position: absolute;
-  top: 8%; /* Adjust based on your image */
-  left: 8%;
-  right: 8%;
-  bottom: 100%;
-  width: 80%;
-  height: 40%;
+  top: 26%; /* Adjust based on your image */
+  left: 33%;
+  width: 32%;
+  height: 29%;
   background: #000;
   color: #0ff;
   font-family: "Press Start 2P", monospace;
