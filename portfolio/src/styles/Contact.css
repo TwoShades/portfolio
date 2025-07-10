@@ -1,0 +1,406 @@
+.contact-container {
+  font-family: "Press Start 2P", monospace;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0c0c1f 100%);
+  color: #0ff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 25% 25%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    );
+  animation: ambientGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes ambientGlow {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.pixel-computer {
+  position: relative;
+  z-index: 10;
+}
+
+.computer-body {
+  background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+  border: 4px solid #0ff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
+  position: relative;
+}
+
+.computer-bezel {
+  background: linear-gradient(145deg, #333, #111);
+  border: 3px solid #0ff;
+  border-radius: 6px;
+  padding: 15px;
+  position: relative;
+}
+
+.computer-screen {
+  background: #000;
+  border: 2px solid #0ff;
+  border-radius: 4px;
+  width: 800px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.2),
+    0 0 50px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.computer-base {
+  height: 40px;
+  background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+  border-top: 2px solid #0ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.power-button {
+  width: 12px;
+  height: 12px;
+  background: #0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0ff;
+  animation: powerPulse 2s ease-in-out infinite;
+}
+
+@keyframes powerPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.speaker-left,
+.speaker-right {
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(45deg, #111, #333);
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.speaker-left::after,
+.speaker-right::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    #0ff 2px,
+    #0ff 3px
+  );
+  border-radius: 8px;
+  opacity: 0.3;
+}
+
+.computer-keyboard {
+  margin-top: 20px;
+  background: linear-gradient(145deg, #2a2a3a, #1a1a2a);
+  border: 3px solid #0ff;
+  border-radius: 8px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.key {
+  background: linear-gradient(145deg, #333, #111);
+  border: 2px solid #0ff;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.4rem;
+  color: #0ff;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  transition: all 0.1s ease;
+}
+
+.key:hover {
+  background: linear-gradient(145deg, #0ff, #00cccc);
+  color: #000;
+  transform: translateY(-1px);
+}
+
+.spacebar {
+  width: 150px;
+  font-size: 0.3rem;
+}
+
+.terminal {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #0ff;
+  font-family: "Press Start 2P", monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  background: linear-gradient(145deg, #333, #111);
+  border-bottom: 2px solid #0ff;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+}
+
+.terminal-title {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.term-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.minimize {
+  background: #ff0;
+}
+.maximize {
+  background: #0f0;
+}
+.close {
+  background: #f00;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  background: #000;
+}
+
+.boot-sequence-contact {
+  margin-bottom: 15px;
+  color: #0ff;
+}
+
+.boot-line {
+  margin: 5px 0;
+  opacity: 0.9;
+  color: #0ff;
+  animation: typewriter 0.8s ease-out;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.command-history {
+  margin-bottom: 15px;
+}
+
+.history-item {
+  margin: 8px 0;
+}
+
+.prompt-line {
+  color: #0ff;
+  margin-bottom: 3px;
+}
+
+.input-line {
+  color: #fff;
+  margin-left: 20px;
+  word-break: break-all;
+  font-size: 0.6rem;
+}
+
+.input-line.success {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  animation: successGlow 0.5s ease-out;
+}
+
+@keyframes successGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.system .prompt-line {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+
+.processing {
+  margin: 15px 0;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 10px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid #0ff;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0ff, #00cccc);
+  width: 0%;
+  animation: loadingProgress 2s ease-in-out;
+}
+
+@keyframes loadingProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.current-command {
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.input-prompt {
+  color: #0ff;
+  margin-right: 5px;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.7rem;
+  outline: none;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.cursor {
+  color: #0ff;
+  animation: cursorBlink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .computer-screen {
+    width: 600px;
+    height: 400px;
+  }
+
+  .terminal-body {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .computer-screen {
+    width: 400px;
+    height: 300px;
+  }
+
+  .key {
+    width: 25px;
+    height: 25px;
+    font-size: 0.35rem;
+  }
+
+  .spacebar {
+    width: 120px;
+  }
+}

@@ -16,7 +16,6 @@ const Footer = () => {
         >
           LinkedIn
         </a>
-        <a href="mailto:your.email@example.com">Email</a>
       </div>
     </footer>
   );

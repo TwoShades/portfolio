@@ -105,7 +105,7 @@ const Home = () => {
         <div className="boot-sequence">
           <div className="tv-frame">
             <img
-              src={require("../assets/UI/pc-setup-full.png")}
+              src={require("../assets/UI/pc-setup-1-Recovered.png")}
               alt="Pixel TV"
             />
             <div className="tv-screen">
