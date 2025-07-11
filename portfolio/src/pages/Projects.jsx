@@ -1,61 +1,54 @@
 import React from "react";
 import "../styles/Project.css";
-
-// import waddlePreview from '../assets/previews/waddle-runner.gif';
-// import vrPreview from '../assets/previews/vr-cleanroom.gif';
-// import awsPreview from '../assets/previews/aws-app.gif';
+import { useTranslation } from "react-i18next";
 
 import placeholderPreview from "../assets/previews/placeholder-project.gif";
 
-const projects = [
-  {
-    title: "Waddle Runner 🐧",
-    description:
-      "An endless runner game built in Unity. Players collect fish and trade them for hats. Features URP, Animator, ShaderGraph, and a save system.",
-    tech: ["Unity", "C#", "URP", "Save System"],
-    preview: placeholderPreview,
-  },
-  {
-    title: "VR Bio-Manufacturing Simulation 🧪",
-    description:
-      "A VR training experience for biochemical cleanroom environments. Built in Unity with VR interactions, localization, and Arduino input.",
-    tech: ["Unity", "VR", "Arduino", "Localization"],
-    preview: placeholderPreview,
-  },
-  {
-    title: "AR Cleanroom App 📱",
-    description:
-      "Mobile companion app for VR sim. Built in Unity with AR camera support, 3D models, and multilingual support.",
-    tech: ["Unity", "AR", "C#", "Mobile"],
-    preview: placeholderPreview,
-  },
-  {
-    title: "Mr. Robot CTF 🧠",
-    description:
-      "Completed a CTF cybersecurity challenge using Nmap, Metasploit, John the Ripper. Focused on ethical hacking and penetration testing.",
-    tech: ["Kali Linux", "Cybersecurity", "CTF"],
-    preview: placeholderPreview,
-  },
-  {
-    title: "AWS Python Backend ⚙️",
-    description:
-      "Built a Python/MongoDB app with AWS hosting. Includes CRUD functionality and tested schema handling.",
-    tech: ["Python", "MongoDB", "AWS"],
-    preview: placeholderPreview,
-  },
-  {
-    title: "This Portfolio Site 🌐",
-    description:
-      "Pixel art-themed React site showcasing my resume, projects, and skills. Features retro sound FX, routing, and responsive UI.",
-    tech: ["React.js", "CSS", "Pixel UI"],
-    preview: placeholderPreview,
-  },
-];
-
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      title: t("projects.waddle.title"),
+      description: t("projects.waddle.description"),
+      tech: ["Unity", "C#", "URP", t("projects.tags.saveSystem")],
+      preview: placeholderPreview,
+    },
+    {
+      title: t("projects.vrSim.title"),
+      description: t("projects.vrSim.description"),
+      tech: ["Unity", "VR", "Arduino", t("projects.tags.localization")],
+      preview: placeholderPreview,
+    },
+    {
+      title: t("projects.arApp.title"),
+      description: t("projects.arApp.description"),
+      tech: ["Unity", "AR", "C#", t("projects.tags.mobile")],
+      preview: placeholderPreview,
+    },
+    {
+      title: t("projects.ctf.title"),
+      description: t("projects.ctf.description"),
+      tech: ["Kali Linux", "Cybersecurity", "CTF"],
+      preview: placeholderPreview,
+    },
+    {
+      title: t("projects.aws.title"),
+      description: t("projects.aws.description"),
+      tech: ["Python", "MongoDB", "AWS"],
+      preview: placeholderPreview,
+    },
+    {
+      title: t("projects.portfolio.title"),
+      description: t("projects.portfolio.description"),
+      tech: ["React.js", "CSS", t("projects.tags.pixelUI")],
+      preview: placeholderPreview,
+    },
+  ];
+
   return (
     <div className="projects-container">
-      <h2>📂 Projects</h2>
+      <h2>📂 {t("projects.header")}</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="card-wrapper" key={index}>
@@ -85,7 +78,7 @@ const Projects = () => {
                       alt={`${project.title} preview`}
                     />
                   ) : (
-                    <p>No Preview Available</p>
+                    <p>{t("projects.noPreview")}</p>
                   )}
                 </div>
               </div>

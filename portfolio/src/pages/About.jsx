@@ -1,39 +1,36 @@
 import React from "react";
 import "../styles/About.css";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="about-container">
       <div className="dialog-box">
-        <p className="npc-name">🧙‍♂️ Samuel the Dev</p>
-        <p className="dialog-text">
-          “Greetings, traveler! I’m Samuel, a Unity Developer & VR Engineer on a
-          quest to build immersive simulations, mobile experiences, and
-          pixel-perfect interfaces. I've spent years wielding tools like Unity,
-          React, and Arduino to create both educational and entertaining
-          experiences. Let me show you my stats...”
-        </p>
+        <p className="npc-name">🧙‍♂️ {t("about.npcName")}</p>
+        <p className="dialog-text">{t("about.dialog")}</p>
       </div>
 
       <div className="stats-panel">
-        <h3>🧰 Inventory</h3>
+        <h3>🧰 {t("about.inventoryTitle")}</h3>
         <ul>
-          <li>🛠️ Unity / C#</li>
-          <li>🎮 VR/AR Interaction Design</li>
-          <li>⚛️ React.js / JS</li>
-          <li>💡 Arduino / Electronics</li>
-          <li>🌍 Multilingual & Localization Systems</li>
-          <li>🧠 Game Design & UX</li>
+          <li>🛠️ {t("about.skills.unity")}</li>
+          <li>🎮 {t("about.skills.vr")}</li>
+          <li>⚛️ {t("about.skills.react")}</li>
+          <li>💡 {t("about.skills.arduino")}</li>
+          <li>🌍 {t("about.skills.localization")}</li>
+          <li>🧠 {t("about.skills.ux")}</li>
         </ul>
       </div>
 
       <div className="level-log">
-        <h3>📜 XP Log</h3>
+        <h3>📜 {t("about.xpTitle")}</h3>
         <ul>
-          <li>🎓 Game Dev beginnings: Built indie games, Penguin Runner 🐧</li>
-          <li>🧪 Internship turned Consultant for VR Bio-Manufacturing Sim</li>
-          <li>📱 Created mobile app companion w/ AR machine viewer</li>
-          <li>🌐 Mentored interns & built multilingual systems</li>
+          <li>🎓 {t("about.experience.games")}</li>
+          <li>🧪 {t("about.experience.vrIntern")}</li>
+          <li>📱 {t("about.experience.mobile")}</li>
+          <li>🌐 {t("about.experience.mentor")}</li>
         </ul>
       </div>
     </div>

@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
 import "../styles/Home.css";
+import { useTranslation } from "react-i18next";
 
 import hoverOnSFX from "../assets/sfx/hover-on.wav";
 import hoverOffSFX from "../assets/sfx/hover-off.wav";
 import clickSFX from "../assets/sfx/click.wav";
 
-const bootLines = [
-  "Initializing system...",
-  "Loading assets...",
-  "Connecting to server...",
-  "Access granted.",
-  "Launching portfolio...",
-];
-
 const Home = () => {
-  const [volume, setVolume] = useState(0.5); // Default: 50%
-
+  const { t } = useTranslation();
+  const [volume, setVolume] = useState(0.5);
   const [bootIndex, setBootIndex] = useState(-1);
   const [booting, setBooting] = useState(false);
   const navigate = useNavigate();
@@ -25,6 +17,17 @@ const Home = () => {
   const [typingLine, setTypingLine] = useState("");
   const charIndex = useRef(0);
   const fullLine = useRef("");
+
+  const bootLines = useMemo(
+    () => [
+      t("boot.init"),
+      t("boot.loading"),
+      t("boot.connect"),
+      t("boot.access"),
+      t("boot.launch"),
+    ],
+    [t]
+  );
 
   const hoverAudio = new Audio(hoverOnSFX);
   const hoverOffAudio = new Audio(hoverOffSFX);
@@ -71,7 +74,7 @@ const Home = () => {
     }
 
     return () => clearInterval(interval);
-  }, [bootIndex, booting, navigate]);
+  }, [bootIndex, booting, navigate, bootLines]);
 
   return (
     <div className="home-container">
@@ -79,18 +82,18 @@ const Home = () => {
       {!booting ? (
         <div className="intro-box">
           <h1>👾 Samuel Rivest</h1>
-          <p>Unity Developer · VR Engineer · Creative Technologist</p>
+          <p>{t("home.subtitle")}</p>
           <button
             className="start-button"
             onClick={handlePressPlay}
             onMouseEnter={playHover}
             onMouseLeave={playHoverOff}
           >
-            ▶ Press Start
+            ▶ {t("home.pressStart")}
           </button>
 
           <div className="volume-slider">
-            🔉 Volume:
+            🔉 {t("home.volume")}:
             <input
               type="range"
               min="0"

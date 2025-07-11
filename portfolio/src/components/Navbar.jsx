@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher"; // 👈 import it
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="pixel-navbar">
       <div className="logo">👾 Samuel</div>
+
       <ul className="nav-links">
         <li>
           <NavLink to="/" className="nav-item">
@@ -33,6 +35,8 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+
+      <LanguageSwitcher />
     </nav>
   );
 };

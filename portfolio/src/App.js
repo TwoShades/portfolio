@@ -1,11 +1,12 @@
 // src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./i18n";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-// Placeholder imports for future pages
 import About from "./pages/About";
 import Project from "./pages/Projects";
 import Resume from "./pages/Resume";

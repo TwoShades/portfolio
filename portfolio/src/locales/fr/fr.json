@@ -1,0 +1,138 @@
+{
+  "boot": {
+    "init": "Initialisation du système...",
+    "loading": "Chargement des ressources...",
+    "connect": "Connexion au serveur...",
+    "access": "Accès autorisé.",
+    "launch": "Lancement du portfolio..."
+  },
+  "home": {
+    "subtitle": "Développeur Unity · Ingénieur VR · Technologue créatif",
+    "pressStart": "Appuyer pour commencer",
+    "volume": "Volume"
+  },
+  "about": {
+    "npcName": "Samuel le Dév",
+    "dialog": "“Salutations, terriens ! Je suis Samuel, un développeur Unity et ingénieur VR en quête de créer des simulations immersives, des expériences mobiles et des interfaces pixel-perfect. J’ai passé des années à manier des outils comme Unity, React et Arduino pour créer des expériences éducatives et ludiques. Laissez-moi vous montrer mes statistiques...”",
+    "inventoryTitle": "Inventaire",
+    "skills": {
+      "unity": "Unity / C#",
+      "vr": "Conception d’interactions VR/AR",
+      "react": "React.js / JS",
+      "arduino": "Arduino / Électronique",
+      "localization": "Systèmes multilingues & de localisation",
+      "ux": "Game Design & UX"
+    },
+    "xpTitle": "Journal d'XP",
+    "experience": {
+      "games": "Débuts en dev de jeux : Création de jeux indés, Penguin Runner 🐧",
+      "vrIntern": "Stage devenu Consultant pour un simulateur VR de biofabrication",
+      "mobile": "Création d'une app mobile avec visualiseur AR",
+      "mentor": "Mentorat de stagiaires & systèmes multilingues"
+    }
+  },
+  "projects": {
+    "header": "Projets",
+    "noPreview": "Aucun aperçu disponible",
+    "tags": {
+      "saveSystem": "Système de sauvegarde",
+      "localization": "Localisation",
+      "mobile": "Mobile",
+      "pixelUI": "IU Pixel"
+    },
+    "waddle": {
+      "title": "Waddle Runner 🐧",
+      "description": "Un jeu de course sans fin basé sur Unity. Les joueurs collectent des poissons et les échangent contre des chapeaux. Comprend URP, Animator, ShaderGraph et un système de sauvegarde.."
+    },
+    "vrSim": {
+      "title": "Simulation de biofabrication en réalité virtuelle 🧪",
+      "description": "Une expérience de formation en réalité virtuelle pour les salles blanches biochimiques. Intégrée à Unity avec interactions en réalité virtuelle, localisation et entrée Arduino."
+    },
+    "arApp": {
+      "title": "Application de salle blanche en RA 📱",
+      "description": "Application mobile compagnon pour simulation de réalité virtuelle. Intégrée à Unity, elle prend en charge les caméras AR, les modèles 3D et le multilinguisme."
+    },
+    "ctf": {
+      "title": "Mr. Robot CTF 🧠",
+      "description": "J'ai réalisé un défi de cybersécurité CTF avec Nmap, Metasploit et John the Ripper. Je me suis concentré sur le piratage éthique et les tests de pénétration."
+    },
+    "aws": {
+      "title": "Backend AWS Python ⚙️",
+      "description": "Création d'une application Python/MongoDB hébergée sur AWS. Inclut les fonctionnalités CRUD et la gestion de schémas testée."
+    },
+    "portfolio": {
+      "title": "Ce site de portfolio 🌐",
+      "description": "Site React sur le thème du pixel art présentant mon CV, mes projets et mes compétences. Il propose des effets sonores rétro, du routage et une interface utilisateur réactive."
+    }
+  },
+  "resume": {
+    "title": "Samuel Rivest – CV",
+    "summary": {
+      "title": "Résumé professionnel",
+      "text": "Ingénieur gameplay junior innovant avec plus de deux ans d'expérience en développement logiciel, spécialisé en VR et applications mobiles. Expérience avérée dans le développement de technologies éducatives immersives et de simulations interactives avec Unity, C# et des outils de développement de pointe. Expertise avérée dans la création d'applications centrées sur l'utilisateur, avec une attention particulière portée à la conception UI/UX et à l'innovation technique. Professionnel bilingue engagé à repousser les limites des technologies interactives."
+    },
+    "skills": {
+      "title": "Compétences techniques",
+      "languages": {
+        "label": "Langues",
+        "items": "Python, Java, C#, Swift, SwiftUI"
+      },
+      "mobile": {
+        "label": "Mobile",
+        "items": "Unity, Xcode, Android Studio"
+      },
+      "web": {
+        "label": "Web",
+        "items": "React.js, Angular, Node.js"
+      },
+      "db": {
+        "label": "Base de données",
+        "items": "MySQL, SQLite, MongoDB"
+      },
+      "other": {
+        "label": "Autre",
+        "items": "Blender, Adobe Suite, Kali Linux, UI/UX"
+      }
+    },
+    "languages": {
+      "title": "Langues",
+      "en": "English – Native",
+      "fr": "Français – Maîtrise native",
+      "it": "Italiano – Apprendimento"
+    },
+    "experience": {
+      "title": "Expérience",
+      "items": {
+        "cerasp": "CERASP – Ingénieur Web (2025–présent)",
+        "vr": "VR/AI – Développeur VR (2024)",
+        "jac": "John Abbott – Développeur mobile (2023-2024)",
+        "vapeur": "Vapeur de l’Ouest – Support technique (2018-Maintenant)"
+      }
+    },
+    "education": {
+      "title": "Éducation",
+      "text": "Collège John Abbott – Programmation d'applications mobiles (2023)"
+    },
+    "achievements": {
+      "title": "Réalisations",
+      "text": "Liste du doyen – Semestres d'automne et d'hiver"
+    }
+  },
+  "contact": {
+    "prompts": {
+      "name": "Entrez votre nom:",
+      "company": "Entrez votre entreprise :",
+      "email": "Entrez votre email:",
+      "message": "Entrez votre message:"
+    },
+    "boot": {
+      "init": "INITIALISATION DU PROTOCOLE DE CONTEXTE...",
+      "module": "CHARGEMENT DU MODULE DE TRANSMISSION...",
+      "secure": "ÉTABLISSEMENT D'UNE CONNEXION SÉCURISÉE...",
+      "ready": "PRÊT POUR LA SAISIE"
+    },
+    "processing": "TRAITEMENT...",
+    "success": "MESSAGE_ENVOYÉ_AVEC_SUCCÈS",
+    "error": "ÉCHEC DE L'ENVOI DU MESSAGE"
+  }
+}

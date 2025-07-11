@@ -1,0 +1,138 @@
+{
+  "boot": {
+    "init": "Initializing system...",
+    "loading": "Loading assets...",
+    "connect": "Connecting to server...",
+    "access": "Access granted.",
+    "launch": "Launching portfolio..."
+  },
+  "home": {
+    "subtitle": "Unity Developer · VR Engineer · Creative Technologist",
+    "pressStart": "Press Start",
+    "volume": "Volume"
+  },
+  "about": {
+    "npcName": "Samuel the Dev",
+    "dialog": "“Greetings, earthlings! I’m Samuel, a Unity Developer & VR Engineer on a quest to build immersive simulations, mobile experiences, and pixel-perfect interfaces. I've spent years wielding tools like Unity, React, and Arduino to create both educational and entertaining experiences. Let me show you my stats...”",
+    "inventoryTitle": "Inventory",
+    "skills": {
+      "unity": "Unity / C#",
+      "vr": "VR/AR Interaction Design",
+      "react": "React.js / JS",
+      "arduino": "Arduino / Electronics",
+      "localization": "Multilingual & Localization Systems",
+      "ux": "Game Design & UX"
+    },
+    "xpTitle": "XP Log",
+    "experience": {
+      "games": "Game Dev beginnings: Built indie games, Penguin Runner 🐧",
+      "vrIntern": "Internship turned Consultant for VR Bio-Manufacturing Sim",
+      "mobile": "Created mobile app companion w/ AR machine viewer",
+      "mentor": "Mentored interns & built multilingual systems"
+    }
+  },
+  "projects": {
+    "header": "Projects",
+    "noPreview": "No Preview Available",
+    "tags": {
+      "saveSystem": "Save System",
+      "localization": "Localization",
+      "mobile": "Mobile",
+      "pixelUI": "Pixel UI"
+    },
+    "waddle": {
+      "title": "Waddle Runner 🐧",
+      "description": "An endless runner game built in Unity. Players collect fish and trade them for hats. Features URP, Animator, ShaderGraph, and a save system."
+    },
+    "vrSim": {
+      "title": "VR Bio-Manufacturing Simulation 🧪",
+      "description": "A VR training experience for biochemical cleanroom environments. Built in Unity with VR interactions, localization, and Arduino input."
+    },
+    "arApp": {
+      "title": "AR Cleanroom App 📱",
+      "description": "Mobile companion app for VR sim. Built in Unity with AR camera support, 3D models, and multilingual support."
+    },
+    "ctf": {
+      "title": "Mr. Robot CTF 🧠",
+      "description": "Completed a CTF cybersecurity challenge using Nmap, Metasploit, John the Ripper. Focused on ethical hacking and penetration testing."
+    },
+    "aws": {
+      "title": "AWS Python Backend ⚙️",
+      "description": "Built a Python/MongoDB app with AWS hosting. Includes CRUD functionality and tested schema handling."
+    },
+    "portfolio": {
+      "title": "This Portfolio Site 🌐",
+      "description": "Pixel art-themed React site showcasing my resume, projects, and skills. Features retro sound FX, routing, and responsive UI."
+    }
+  },
+  "resume": {
+    "title": "Samuel Rivest – Resume",
+    "summary": {
+      "title": "Professional Summary",
+      "text": "Innovative Junior Gameplay Engineer with over two years of experience in software development, specializing in VR and mobile applications. Proven track record of developing immersive educational technologies and interactive simulations using Unity, C#, and cutting-edge development tools. Demonstrated expertise in creating user-centric applications with a strong focus on UI/UX design and technical innovation. Bilingual professional committed to pushing the boundaries of interactive technology."
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "languages": {
+        "label": "Languages",
+        "items": "Python, Java, C#, Swift, SwiftUI"
+      },
+      "mobile": {
+        "label": "Mobile",
+        "items": "Unity, Xcode, Android Studio"
+      },
+      "web": {
+        "label": "Web",
+        "items": "React.js, Angular, Node.js"
+      },
+      "db": {
+        "label": "Database",
+        "items": "MySQL, SQLite, MongoDB"
+      },
+      "other": {
+        "label": "Other",
+        "items": "Blender, Adobe Suite, Kali Linux, UI/UX"
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "en": "English – Native",
+      "fr": "Français – Maîtrise native",
+      "it": "Italiano – Apprendimento"
+    },
+    "experience": {
+      "title": "Experience",
+      "items": {
+        "cerasp": "CERASP – Web Engineer (2025–Present)",
+        "vr": "VR/AI – VR Developer (2024)",
+        "jac": "John Abbott – Mobile Dev (2023–2024)",
+        "vapeur": "Vapeur de l’Ouest – Tech Support (2018–Now)"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "text": "John Abbott College – Mobile Application Programming (2023)"
+    },
+    "achievements": {
+      "title": "Accomplishments",
+      "text": "Dean’s List – Fall & Winter Semesters"
+    }
+  },
+  "contact": {
+    "prompts": {
+      "name": "Enter your name:",
+      "company": "Enter your company:",
+      "email": "Enter your email:",
+      "message": "Enter your message:"
+    },
+    "boot": {
+      "init": "INITIALIZING CONTACT PROTOCOL...",
+      "module": "LOADING TRANSMISSION MODULE...",
+      "secure": "ESTABLISHING SECURE CONNECTION...",
+      "ready": "READY FOR INPUT"
+    },
+    "processing": "PROCESSING...",
+    "success": "MESSAGE_SENT_SUCCESSFULLY",
+    "error": "MESSAGE_FAILED_TO_SEND"
+  }
+}

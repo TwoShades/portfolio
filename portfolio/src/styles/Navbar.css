@@ -43,3 +43,29 @@
   color: #fff;
   border-bottom: 2px solid #0ff;
 }
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-switcher button {
+  background-color: transparent;
+  border: 1px solid #0ff;
+  color: #0ff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background-color: #0ff;
+  color: #000;
+}
+
+.language-switcher .active {
+  background-color: #0ff;
+  color: #000;
+}

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Contact.css";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -16,11 +18,16 @@ const Contact = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [commandHistory, setCommandHistory] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
+
   const commands = [
-    { prompt: "Enter your name:", field: "name", type: "text" },
-    { prompt: "Enter your company:", field: "company", type: "text" },
-    { prompt: "Enter your email:", field: "email", type: "email" },
-    { prompt: "Enter your message:", field: "message", type: "textarea" },
+    { prompt: t("contact.prompts.name"), field: "name", type: "text" },
+    { prompt: t("contact.prompts.company"), field: "company", type: "text" },
+    { prompt: t("contact.prompts.email"), field: "email", type: "email" },
+    {
+      prompt: t("contact.prompts.message"),
+      field: "message",
+      type: "textarea",
+    },
   ];
 
   const handleInputSubmit = (value) => {
@@ -40,7 +47,6 @@ const Contact = () => {
     if (currentStep < commands.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      // All fields completed, submit form
       setIsProcessing(true);
 
       emailjs
@@ -55,7 +61,7 @@ const Contact = () => {
             ...newHistory,
             {
               prompt: "System:",
-              input: "MESSAGE_SENT_SUCCESSFULLY",
+              input: t("contact.success"),
               step: "success",
               isSystem: true,
             },
@@ -67,7 +73,7 @@ const Contact = () => {
             ...newHistory,
             {
               prompt: "System:",
-              input: "MESSAGE_FAILED_TO_SEND",
+              input: t("contact.error"),
               step: "fail",
               isSystem: true,
             },
@@ -125,16 +131,10 @@ const Contact = () => {
 
         <div className="terminal-body">
           <div className="boot-sequence-contact">
-            <div className="boot-line">
-              C:\&gt; INITIALIZING CONTACT PROTOCOL...
-            </div>
-            <div className="boot-line">
-              C:\&gt; LOADING TRANSMISSION MODULE...
-            </div>
-            <div className="boot-line">
-              C:\&gt; ESTABLISHING SECURE CONNECTION...
-            </div>
-            <div className="boot-line">C:\&gt; READY FOR INPUT</div>
+            <div className="boot-line">C:\&gt; {t("contact.boot.init")}</div>
+            <div className="boot-line">C:\&gt; {t("contact.boot.module")}</div>
+            <div className="boot-line">C:\&gt; {t("contact.boot.secure")}</div>
+            <div className="boot-line">C:\&gt; {t("contact.boot.ready")}</div>
             <div className="boot-line">
               ═══════════════════════════════════════
             </div>
@@ -160,7 +160,9 @@ const Contact = () => {
 
           {isProcessing && (
             <div className="processing">
-              <div className="prompt-line">C:\&gt; PROCESSING...</div>
+              <div className="prompt-line">
+                C:\&gt; {t("contact.processing")}
+              </div>
               <div className="loading-bar">
                 <div className="loading-fill"></div>
               </div>
@@ -183,9 +185,7 @@ const Contact = () => {
                   value={currentInput}
                   onChange={(e) => setCurrentInput(e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      handleSubmit(e);
-                    }
+                    if (e.key === "Enter") handleSubmit(e);
                   }}
                   className="terminal-input"
                   autoFocus
