@@ -13,7 +13,25 @@
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  background-color: transparent;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 0.4rem 0.8rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-btn:hover {
+  background-color: #0ff;
+  color: #000;
 }
 
 .footer-links a {
@@ -24,4 +42,20 @@
 
 .footer-links a:hover {
   color: #fff;
+}
+
+.footer-download-btn {
+  background-color: transparent;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 0.4rem 0.8rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-download-btn:hover {
+  background-color: #0ff;
+  color: #000;
 }

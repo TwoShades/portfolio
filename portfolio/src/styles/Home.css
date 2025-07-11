@@ -270,3 +270,59 @@
     padding: 0.8rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3rem;
+  }
+
+  .intro-box {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .intro-box h1 {
+    font-size: 0.8rem;
+  }
+
+  .intro-box p {
+    font-size: 0.45rem;
+    margin-bottom: 1rem;
+  }
+
+  .start-button {
+    font-size: 0.6rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .volume-slider {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.5rem;
+  }
+
+  .volume-slider input[type="range"] {
+    width: 80%;
+  }
+
+  .boot-sequence {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .tv-frame {
+    max-width: 100%;
+  }
+
+  .tv-screen {
+    top: 26%;
+    left: 32%;
+    width: 36%;
+    height: 28%;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+  }
+}

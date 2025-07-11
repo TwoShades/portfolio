@@ -93,3 +93,61 @@ ul {
   margin: 0;
   line-height: 2;
 }
+
+@media (max-width: 768px) {
+  .dialog-box,
+  .stats-panel,
+  .level-log {
+    padding: 1.2rem;
+    font-size: 0.7rem;
+  }
+
+  .npc-name {
+    font-size: 0.9rem;
+  }
+
+  .dialog-text {
+    font-size: 0.7rem;
+    line-height: 1.6;
+  }
+
+  .stats-panel h3,
+  .level-log h3 {
+    font-size: 0.8rem;
+  }
+
+  ul {
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .dialog-box,
+  .stats-panel,
+  .level-log {
+    padding: 1rem;
+    font-size: 0.65rem;
+  }
+
+  .npc-name {
+    font-size: 0.75rem;
+  }
+
+  .dialog-text {
+    font-size: 0.65rem;
+    line-height: 1.5;
+  }
+
+  .stats-panel h3,
+  .level-log h3 {
+    font-size: 0.75rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+}
