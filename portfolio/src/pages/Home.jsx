@@ -39,7 +39,7 @@ const Home = () => {
 
   const playHover = () => hoverAudio.play().catch(() => {});
   const playHoverOff = () => hoverOffAudio.play().catch(() => {});
-  const playClick = () => clickAudio.play().catch(() => {});
+  // const playClick = () => clickAudio.play().catch(() => {});
 
   const handlePressPlay = () => {
     clickAudio.play();

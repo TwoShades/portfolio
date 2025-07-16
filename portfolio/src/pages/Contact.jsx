@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Contact.css";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
