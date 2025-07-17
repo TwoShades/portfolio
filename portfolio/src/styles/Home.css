@@ -2,14 +2,14 @@
 
 .home-container {
   font-family: "Press Start 2P", monospace;
-  height: 100vh;
   background: #0c0c1f;
+  color: #ffffff;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  color: #ffffff;
-  overflow: hidden;
+  flex: 1;
+  padding: 2rem;
 }
 
 .pixel-bg {
